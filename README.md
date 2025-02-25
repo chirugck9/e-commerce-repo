@@ -16,17 +16,19 @@ This is the backend API for an E-commerce application built using Node.js, Expre
    ```
 3. Set Up Environment Variables
    Create a .env file in the root directory and add the following environment variables:
+        
         PORT=5000
         MONGO_URI=mongodb://localhost:27017/ecommerce
         JWT_SECRET=your_jwt_secret
         STRIPE_SECRET_KEY=your_stripe_secret_key
         FIREBASE_ADMIN_SDK=your_firebase_admin_sdk
-4. Start MongoDB
+   
+5. Start MongoDB
     Ensure MongoDB is running locally:
     ```bash
        mongod
     ```
-5. Run the Project
+6. Run the Project
     ```bash
        npm run dev
     ```
