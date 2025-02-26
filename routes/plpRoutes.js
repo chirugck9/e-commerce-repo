@@ -1,9 +1,12 @@
 const express = require("express");
 const { getProducts } = require("../controllers/plpController");
-const { verifyToken } = require("../middlewares/authMiddleware");
+const {
+	verifyToken,
+	authenticateAdmin,
+} = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
-router.get("/products", verifyToken, getProducts);
+router.get("/products", verifyToken, authenticateAdmin, getProducts);
 
 module.exports = router;
